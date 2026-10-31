@@ -1,0 +1,25 @@
+[project]
+name = "pcaphunt"
+version = "0.1.0"
+description = "Generate attack-laced packet captures and hunt them with a Zeek-style analyser."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+authors = [{ name = "Abdulmohsen Alharbi" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+pcaphunt = "pcaphunt.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pcaphunt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

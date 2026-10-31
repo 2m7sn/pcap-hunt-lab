@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# analyser output and fetched real captures
+out/
+out_real/
+real/
+
+# large captures (>5 MB) are not committed; regenerate with `pcaphunt generate [--hard]`.
+# small sample pcaps under pcaps/ and pcaps-hard/ ARE committed as fixtures.
+pcaps/exfil.pcap
+pcaps-hard/backup_upload_3mb.pcap
+pcaps-heldout/
+*.pcap.gz

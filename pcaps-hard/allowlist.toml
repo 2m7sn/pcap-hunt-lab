@@ -1,0 +1,7 @@
+# Known-good destinations for the hard set. Loaded by `pcaphunt eval`/`hunt --config`.
+[exfil]
+allow_dst = ["198.51.100.200"]        # backup.example.com
+allow_sni = ["backup.example.com"]
+
+[dns_tunnel]
+allow_domains = []

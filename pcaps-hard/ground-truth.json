@@ -1,0 +1,62 @@
+[
+  {
+    "pcap": "slow_scan_30ports.pcap",
+    "truth": [
+      {
+        "scenario": "slow_scan_30ports",
+        "detector": "scan",
+        "entity": "10.0.0.10",
+        "technique": "T1046"
+      }
+    ]
+  },
+  {
+    "pcap": "horizontal_scan_60hosts.pcap",
+    "truth": [
+      {
+        "scenario": "horizontal_scan_60hosts",
+        "detector": "scan",
+        "entity": "10.0.0.10",
+        "technique": "T1046"
+      }
+    ]
+  },
+  {
+    "pcap": "beacon_40pct_jitter.pcap",
+    "truth": [
+      {
+        "scenario": "beacon_40pct_jitter",
+        "detector": "beacon",
+        "entity": "10.0.0.12->192.0.2.77",
+        "technique": "T1071.001"
+      }
+    ]
+  },
+  {
+    "pcap": "benign_periodic.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "cdn_long_labels.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "backup_upload_3mb.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "slow_ssh_brute.pcap",
+    "truth": [
+      {
+        "scenario": "slow_ssh_brute",
+        "detector": "bruteforce",
+        "entity": "10.0.0.11",
+        "technique": "T1110"
+      }
+    ]
+  },
+  {
+    "pcap": "arp_failover.pcap",
+    "truth": []
+  }
+]

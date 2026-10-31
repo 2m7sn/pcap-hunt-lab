@@ -1,0 +1,106 @@
+[
+  {
+    "pcap": "normal_1.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "normal_2.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "normal_3.pcap",
+    "truth": []
+  },
+  {
+    "pcap": "syn_scan.pcap",
+    "truth": [
+      {
+        "scenario": "syn_scan",
+        "detector": "scan",
+        "entity": "10.0.0.10",
+        "technique": "T1046",
+        "ports": 125,
+        "target": "10.0.0.5"
+      }
+    ]
+  },
+  {
+    "pcap": "ssh_brute.pcap",
+    "truth": [
+      {
+        "scenario": "ssh_brute",
+        "detector": "bruteforce",
+        "entity": "10.0.0.11",
+        "technique": "T1110",
+        "attempts": 40,
+        "target": "10.0.0.5"
+      }
+    ]
+  },
+  {
+    "pcap": "c2_beacon.pcap",
+    "truth": [
+      {
+        "scenario": "c2_beacon",
+        "detector": "beacon",
+        "entity": "10.0.0.12->192.0.2.66",
+        "technique": "T1071.001",
+        "interval": 30.0,
+        "beacons": 20,
+        "dst": "192.0.2.66"
+      }
+    ]
+  },
+  {
+    "pcap": "dns_tunnel.pcap",
+    "truth": [
+      {
+        "scenario": "dns_tunnel",
+        "detector": "dns_tunnel",
+        "entity": "10.0.0.13",
+        "technique": "T1071.004",
+        "queries": 80,
+        "domain": "tun.example"
+      }
+    ]
+  },
+  {
+    "pcap": "exfil.pcap",
+    "truth": [
+      {
+        "scenario": "exfil",
+        "detector": "exfil",
+        "entity": "10.0.0.14->192.0.2.200",
+        "technique": "T1048",
+        "bytes": 6000000,
+        "dst": "192.0.2.200"
+      }
+    ]
+  },
+  {
+    "pcap": "arp_spoof.pcap",
+    "truth": [
+      {
+        "scenario": "arp_spoof",
+        "detector": "arp_spoof",
+        "entity": "10.0.0.1",
+        "technique": "T1557.002",
+        "gratuitous": 30,
+        "spoofed_mac": "02:00:00:00:00:42"
+      }
+    ]
+  },
+  {
+    "pcap": "cleartext_creds.pcap",
+    "truth": [
+      {
+        "scenario": "cleartext_creds",
+        "detector": "cleartext_creds",
+        "entity": "10.0.0.10",
+        "technique": "T1552.001",
+        "proto": "http-basic",
+        "dst": "203.0.113.20"
+      }
+    ]
+  }
+]
